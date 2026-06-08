@@ -162,7 +162,17 @@
        ═══════════════════════ -->
   <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-28">
     <h2 class="text-white text-2xl sm:text-3xl font-bold mb-2">Changelog</h2>
-    <p class="text-white/35 text-sm mb-10">What's new in each release.</p>
+    <p class="text-white/35 text-sm mb-2">What's new in each release.</p>
+    <p class="text-white/30 text-xs mb-10">
+      Auto-synced from
+      <a href="https://github.com/BothaGideon/otaku_tracker/blob/main/CHANGELOG.md"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="text-ot-purple-light/80 hover:text-ot-purple-light underline underline-offset-2 transition-colors">CHANGELOG.md</a>.
+      @if (changelogLoadError()) {
+        <span class="text-amber-300/85">Using local fallback entries right now.</span>
+      }
+    </p>
 
     <div class="flex flex-col gap-3">
       @for (entry of changelog; track entry.version) {
