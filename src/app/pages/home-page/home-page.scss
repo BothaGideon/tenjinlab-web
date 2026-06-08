@@ -1,0 +1,157 @@
+/* ── Hero glows ── */
+.hero-glow-top {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(37,99,235,0.14) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-glow-left {
+  position: absolute;
+  top: 80px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(96,165,250,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-glow-right {
+  position: absolute;
+  top: 100px;
+  right: -200px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* ── Grid overlay ── */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(37,99,235,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* ── Hero title shimmer ── */
+@keyframes shimmer-blue {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+.word-purpose {
+  display: block;
+  background: linear-gradient(90deg, #60a5fa 0%, #2563eb 60%, #3b82f6 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer-blue 4s linear infinite;
+}
+
+/* ── Hero CTA glow ── */
+.hero-cta {
+  box-shadow: 0 0 32px rgba(37,99,235,0.4), 0 4px 16px rgba(0,0,0,0.3);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  &:hover {
+    box-shadow: 0 0 48px rgba(37,99,235,0.55), 0 8px 24px rgba(0,0,0,0.3);
+    transform: translateY(-1px);
+  }
+}
+
+/* ── Stats divider ── */
+.stat-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(37,99,235,0.25);
+}
+
+/* ── Section eyebrow line ── */
+.section-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: rgba(96,165,250,0.4);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ── Project card ── */
+.project-card {
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  background: linear-gradient(135deg, #0a0010 0%, #100020 40%, #160030 70%, #0d0018 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  &:hover {
+    border-color: rgba(155, 93, 229, 0.45);
+    transform: translateY(-3px) scale(1.005);
+    box-shadow: 0 0 60px rgba(155,93,229,0.18), 0 24px 48px rgba(0,0,0,0.3);
+  }
+}
+
+.card-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 1px;
+  background: #c96bff;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.card-name {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #e8d0ff 0%, #b880ff 40%, #9b5de5 70%, #7a3fc0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(155,93,229,0.25), transparent);
+}
+
+.card-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 0 30px rgba(110,50,200,0.45);
+}
+
+.project-card:hover .card-cta-arrow { transform: translateX(3px); }
+.card-cta-arrow { transition: transform 0.2s; }
+
+/* ── "Coming soon" card ── */
+.card-soon {
+  border-radius: 20px;
+  border: 1px dashed rgba(37,99,235,0.2);
+  background: rgba(15, 22, 41, 0.5);
+  min-height: 280px;
+}
+
+/* ── Hero logo drop-shadow ── */
+.hero-logo {
+  filter: drop-shadow(0 0 32px rgba(37,99,235,0.4));
+}
