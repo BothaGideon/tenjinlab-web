@@ -1,0 +1,39 @@
+/* Hero banner animations */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.85; transform: translate(-50%, -50%) scale(1.04); }
+}
+
+.app-name {
+  background: linear-gradient(135deg, #e8d0ff 0%, #b880ff 40%, #9b5de5 70%, #7a3fc0 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+.icon-ring-outer {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.icon-ring-mid {
+  animation: pulse-glow 4s ease-in-out infinite 1s;
+}
+
+/* Screenshot placeholder shimmer */
+.screenshot-placeholder {
+  background: linear-gradient(135deg, #100020 0%, #1a0035 50%, #100020 100%);
+  background-size: 200% 200%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Changelog accordion transition */
+.changelog-body {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
