@@ -70,7 +70,7 @@ export class OtakuTrackerPage {
     {
       icon: '📋',
       title: 'Smart Watchlist',
-      description: 'Track every series across Watching, Completed, On-Hold, and Dropped — with episode progress and personal ratings.',
+      description: 'Track every series across Watching, Completed, On-Hold, and Dropped, with quick-edit controls directly from your list.',
     },
     {
       icon: '🔄',
@@ -79,18 +79,18 @@ export class OtakuTrackerPage {
     },
     {
       icon: '🔍',
-      title: 'Discovery Engine',
-      description: 'AI-powered recommendations based on your taste profile, plus curated seasonal picks.',
+      title: 'Rich Discovery',
+      description: 'Explore seasonal feeds, apply filters, and use richer search metadata to find your next series quickly.',
     },
     {
       icon: '📅',
-      title: 'Season Tracker',
-      description: 'See exactly what\'s airing this season, when new episodes drop, and never miss a release.',
+      title: 'Seasonal Browser',
+      description: 'Browse the current season with carousels and feed updates, including list user-count stats on seasonal cards.',
     },
     {
       icon: '📊',
-      title: 'Stats & Insights',
-      description: 'Deep analytics on your watch habits — genres, studios, hours watched, and visual heatmaps.',
+      title: 'Stats Polish',
+      description: 'Cleaner poster overlays and details stats with compact and separated-number formatting for faster scanning.',
     },
     {
       icon: '🌙',
