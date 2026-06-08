@@ -151,6 +151,29 @@
   min-height: 280px;
 }
 
+@keyframes soon-icon-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(37,99,235,0); }
+  50% { transform: scale(1.04); box-shadow: 0 0 18px rgba(37,99,235,0.18); }
+}
+
+@keyframes bar-rise {
+  0%, 100% { transform: translateY(0); opacity: 0.45; }
+  50% { transform: translateY(-1.5px); opacity: 0.9; }
+}
+
+.card-soon-icon {
+  animation: soon-icon-pulse 2.8s ease-in-out infinite;
+}
+
+.card-soon-bars .bar {
+  transform-origin: center bottom;
+  animation: bar-rise 1.5s ease-in-out infinite;
+}
+
+.card-soon-bars .bar-1 { animation-delay: 0s; }
+.card-soon-bars .bar-2 { animation-delay: 0.2s; }
+.card-soon-bars .bar-3 { animation-delay: 0.4s; }
+
 /* ── Hero logo drop-shadow ── */
 .hero-logo {
   filter: drop-shadow(0 0 32px rgba(37,99,235,0.4));
