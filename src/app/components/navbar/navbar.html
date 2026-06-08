@@ -1,0 +1,60 @@
+<nav class="navbar fixed top-0 left-0 right-0 z-50 border-b border-blue-900/30">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a routerLink="/home" (click)="closeMenu()" class="flex items-center gap-3 shrink-0">
+      <img src="logos/tenjinlab_icon.png" alt="TenjinLab icon" class="h-8 w-auto" />
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-8 list-none">
+      <li>
+        <a routerLink="/home"
+           routerLinkActive="!text-tenjin-blue-light"
+           [routerLinkActiveOptions]="{ exact: true }"
+           class="text-white/55 hover:text-white transition-colors text-sm font-outfit font-medium">
+          Home
+        </a>
+      </li>
+      <li>
+        <a routerLink="/projects/otakutracker"
+           routerLinkActive="!text-tenjin-blue-light"
+           class="text-white/55 hover:text-white transition-colors text-sm font-outfit font-medium">
+          OtakuTracker
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button (click)="toggleMenu()"
+            class="md:hidden text-white/60 hover:text-white p-2 rounded-lg transition-colors"
+            aria-label="Toggle menu">
+      @if (!menuOpen()) {
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      } @else {
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      }
+    </button>
+  </div>
+
+  <!-- Mobile dropdown -->
+  @if (menuOpen()) {
+    <div class="md:hidden bg-tenjin-surface border-t border-blue-900/30 px-4 py-3 flex flex-col gap-1">
+      <a routerLink="/home" (click)="closeMenu()"
+         routerLinkActive="!text-tenjin-blue-light !bg-blue-900/20"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="text-white/60 hover:text-white hover:bg-white/5 font-outfit font-medium text-sm px-3 py-2.5 rounded-lg transition-colors">
+        Home
+      </a>
+      <a routerLink="/projects/otakutracker" (click)="closeMenu()"
+         routerLinkActive="!text-tenjin-blue-light !bg-blue-900/20"
+         class="text-white/60 hover:text-white hover:bg-white/5 font-outfit font-medium text-sm px-3 py-2.5 rounded-lg transition-colors">
+        OtakuTracker
+      </a>
+    </div>
+  }
+</nav>
